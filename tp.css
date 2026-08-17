@@ -10,13 +10,13 @@ body {
     display: grid;
     grid-template-columns: 20% 1fr;
     grid-template-rows: auto 1fr auto;
-    grid-template-areas: "header header"
-                         "aside main"
-                         "footer footer";
+    grid-template-areas: "h h"
+                         "a m"
+                         "f f";
     gap: 20px;
 }
 header {
-    grid-area: header;
+    grid-area: h;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,7 +32,7 @@ header h1 {
     object-fit: contain;
 }
 aside {
-    grid-area: aside;
+    grid-area: a;
     background-color: #ffffff;
     padding: 20px;
     border: 1px solid #dddddd;
@@ -52,7 +52,7 @@ aside a:hover {
     text-decoration: underline;
 }
 main {
-    grid-area: main;
+    grid-area: m;
     background-color: #ffffff;
     padding: 25px;
     border: 1px solid #dddddd;
@@ -81,7 +81,7 @@ main img {
     margin: 20px auto;
 }
 footer {
-    grid-area: footer;
+    grid-area: f;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
