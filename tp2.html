@@ -6,7 +6,7 @@
 <body>
     <div class="contenedor-wiki">
         <header>
-            <h1>GitHub</h1>
+            <h1>SimonWiki</h1>
             <img
                 class="logo"
                 src="img\Captura_de_pantalla_2026-08-17_132006-removebg-preview.png"
@@ -14,24 +14,30 @@
         </header>
         <aside>
             <h2>Índice</h2>
-            <a href="tp1.html">Inicio</a>
-            <a href="tp2.html">GitHub</a>
-            <a href="tp3.html">Git</a>
-            <a href="tp4.html">Linus Torvalds</a>
+            <a href="#historia">Historia</a>
+            <a href="#caracteristicas">Caracteristicas</a>            
+            <a href="#servicios">Servicios</a>
         </aside>
         <main>
             <h1>GitHub</h1>
             <p>
-                GitHub es una plataforma para desarrolladores que permite
-                crear, almacenar, administrar y compartir código utilizando
-                Git como sistema de control de versiones distribuido.
-                Además, ofrece herramientas como control de acceso,
-                seguimiento de errores, gestión de tareas, integración
-                continua y wikis para cada proyecto.
+                GitHub es una forja (plataforma de desarrollo colaborativo)
+                 para alojar proyectos utilizando el sistema de control de 
+                 versiones Git. Se utiliza principalmente para la creación 
+                 de código fuente de programas de computadora. El software 
+                 que opera GitHub fue escrito en Ruby on Rails. Desde enero 
+                 de 2010, GitHub opera bajo el nombre de GitHub, Inc. 
+                 Anteriormente era conocida como Logical Awesome LLC. 
+                 El código de los proyectos alojados en GitHub se almacena 
+                 generalmente de forma pública.
             </p>
             <p>
-                Desde 2018 pertenece a Microsoft y tiene su sede en
-                San Francisco.
+                El 4 de junio de 2018 Microsoft compró GitHub por la cantidad 
+                de 7500 millones de dólares. Al inicio, el cambio de 
+                propietario generó preocupaciones y la salida de algunos 
+                proyectos de este sitio; sin embargo, no fueron representativos. 
+                GitHub continúa siendo la plataforma más importante de colaboración 
+                para proyectos de código abierto.
             </p>
             <p>
                 Es ampliamente utilizado para proyectos de software de
@@ -45,7 +51,7 @@
                 src="img/GitHub_Invertocat_Logo.svg.webp"
                 alt="Logo de GitHub"
                 width="500">
-            <h2>Historia</h2>
+            <h2 id="historia">Historia</h2>
             <p>
                 La plataforma comenzó a desarrollarse en 2007 y fue lanzada
                 en 2008 por Tom Preston-Werner, Chris Wanstrath, P. J. Hyett
@@ -64,31 +70,268 @@
                 src="img/Number_of_open_source_contributors_by_company.png"
                 alt="Gráfico sobre contribuyentes de código abierto"
                 width="500">
-            <h2>Servicios</h2>
+            <h2 id="caracteristicas">Caracteristicas</h2>
             <p>
-                Entre sus principales servicios se encuentran los repositorios
-                públicos y privados, GitHub Pages para alojar sitios web,
-                GitHub Actions para automatizar procesos de desarrollo, Gist
-                para compartir fragmentos de código y programas educativos
-                para estudiantes y desarrolladores.
+                Los repositorios son, como su propio nombre indica, lugares 
+                virtuales alojados en la nube en donde los usuarios pueden 
+                almacenar cualquier tipo de archivo. Suelen usarse para guardar 
+                archivos de texto que representan código en distintos lenguajes de 
+                programación, los cuales a su vez conforman un programa o aplicación. 
+                Este es el servicio principal que ofrece GitHub: repositorios en donde 
+                los usuarios pueden almacenar el código de sus aplicaciones, ya sea de 
+                forma pública, privada o a través de una organización.
             </p>
-            <h2>Objetivo</h2>
             <p>
-                Su objetivo principal es facilitar la colaboración en
-                proyectos de software mediante herramientas para el control
-                de versiones, revisión de cambios, seguimiento de problemas
-                y trabajo en equipo. También incluye funciones sociales como
-                seguidores, comentarios, discusiones y estadísticas sobre la
-                actividad de los proyectos.
+                Para ser identificados, los repositorios muestran información relevante, 
+                como la descripción del proyecto, los lenguajes de programación usados 
+                o las etiquetas de búsqueda. Un aspecto muy importante de la información 
+                de los repositorios es el archivo «README», el cual los desarrolladores 
+                pueden crear (ya sea en formato Markdown o en formato de texto simple) 
+                para describir su proyecto a fondo. Por lo general, este tipo de 
+                archivo suele contener una descripción, capturas de pantalla del 
+                programa, instrucciones de instalación y la declaración de la licencia.
+            </p>
+            <p>
+                En la pestaña de configuración, los desarrolladores pueden cambiar 
+                aspectos generales del repositorio, así como aspectos más avanzados. 
+                Entre los aspectos más avanzados se incluye el acceso al repositorio 
+                (agregar colaboradores y determinar quiénes pueden interactual con él), 
+                la automatización del y gracias al repositorio (las ramas y sus reglas, 
+                GitHub Actions, webhooks, los ambientes y GitHub Pages), 
+                la seguridad del repositorio (la seguridad y el análisis del código mediante 
+                alertas de bots y actions, las llaves de despliegue y los secretos 
+                cifrados) y, por último, las integraciones, que incluyen el uso de las 
+                aplicaciones instaladas en GitHub y las notificaciones por correo electrónico.
+            </p>
+            <p>
+                Los issues, llamados «propuestas» en español, se asemejan, en cierta medida, 
+                a los hilos en algunos foros y redes sociales: son publicaciones que tratan 
+                sobre una cuestión en específico. En GitHub, los issues son abiertos por 
+                usuarios que tienen un fallo con el código del repositorio y quieren recibir 
+                ayuda para solucionarlo, por usuarios que quieren plantear una compleja mejora 
+                del programa, entre otros usos. Se pueden enlazar pull requests a los issues, 
+                así como asignar usuarios y etiquetas. Pueden convertirse en debates.
+            </p>  
+            <p>
+                Las pull requests son solicitudes de admisión de código. Los usuarios pueden 
+                editar cualquier archivo de código de un repositorio, ya sea a través del editor 
+                integrado de GitHub o desde su ambiente local. Cuando el usuario ha editado uno 
+                o varios archivos, puede enviar la solicitud al repositorio que quiere modificar. 
+                De esta forma, se creará una solicitud en la pestaña de pull requests, donde el 
+                creador del repositorio o los colaboradores pueden decidir si aceptar o denegar 
+                la solicitud. Adicionalmente, pueden revisar el código y enviar comentarios a 
+                modo de retroalimentación. Este proceso se conoce como «revisión de código». 
+                Al igual que con los issues, es posible asignar usuarios y 
+                etiquetas a las pull requests.
+            </p> 
+            <p>
+                Los debates, llamados en inglés discussions, son una mecánica que estuvo en período 
+                de pruebas por un tiempo, siendo posteriormente aceptada como una mecánica nativa de 
+                los repositorios. Son parecidos a los issues ya que pueden crearse sobre temas específicos 
+                y almacenar comentarios de otros usuarios a modo de foro. Para una mejor organización, 
+                los debates pueden clasificarse en diferentes categorías que el dueño del repositorio 
+                puede crear. A diferencia de los issues, hay un sistema de votos para los comentarios y 
+                un usuario con permisos en el repositorio puede marcar una respuesta como «correcta». 
+                Pueden convertirse en issues.
+            </p> 
+            <p>
+                Cada repositorio tiene la opción de usar actions, que es un servicio que permite al 
+                usuario crear flujos de trabajo con los cuales automatizar ciertas acciones, logrando 
+                así una integración continua y una entrega continua. Las actions pueden ser personalizadas 
+                gracias al uso de archivos en un formato concreto. En la pestaña de actions pueden encontrarse 
+                opciones adicionales.
+            </p> 
+            <p>
+                Una función muy útil para algunos repositorios es la de la creación de páginas de wiki. 
+                Gracias a estas, los creadores de los proyectos pueden escribir artículos que expliquen 
+                más cosas acerca del proyecto. Se encuentran en una pestaña aparte, por lo que no es 
+                necesario llenar el directorio del proyecto con archivos de información.
+            </p>
+            <p>
+                Cualquier persona puede ver el contenido de un repositorio público, 
+                de una página de perfil de usuario o de páginas especiales de GitHub 
+                sin la necesidad de crearse una cuenta. Sin embargo, no podrá hacer 
+                ninguna acción, como comentar en issues o discusiones, hacer un fork 
+                de un repositorio, crear un repositorio, etc., si no tiene una cuenta 
+                (y ha iniciado sesión en ella).
+            </p> 
+            <p>
+                Al igual que en las redes sociales, GitHub cuenta con una página para 
+                cada usuario que se registra en el sitio. En la sección lateral izquierda 
+                de los perfiles aparece la información personal y la información adicional 
+                del usuario (la foto de perfil junto con su estado, la biografía, la 
+                compañía en donde trabaja, el lugar en donde reside, el enlace a su 
+                sitio web, su nombre de usuario de Twitter, su dirección de correo 
+                electrónico, las personas y organizaciones que lo patrocinan así como 
+                las personas y organizaciones a las que el usuario patrocina, las insignias 
+                que ha ganado, la cantidad de respuestas en discusiones que han sido marcadas 
+                como «correctas» y las organizaciones a las que pertenece; agregar esta información 
+                es opcional, ya que pueden dejarse los campos en blanco o desactivar mostrar dichas 
+                secciones en los ajustes).
+            </p> 
+            <p>
+                Debajo de la barra de navegación aparece una serie de pestañas a través de las 
+                cuales es posible acceder a todos los repositorios creados por el usuario, a 
+                sus proyectos, a los paquetes que ha creado, a los repositorios que ha marcado 
+                como «favoritos» y a las personas a quienes está patrocinando.
+            </p>
+            <p>
+                En el 2020, una diseñadora de GitHub anunció una nueva función llamada 
+                «GitHub profile READMEs», la cual permite a los usuarios mostrar un 
+                archivo en formato Markdown en el centro de la página de su perfil. 
+                Para hacer esto el usuario debe crear un repositorio con el mismo nombre 
+                de su nombre de usuario y agregar un archivo de texto. Como Markdown 
+                admite texto en diferentes formatos e imágenes, es posible hacer una 
+                combinación de muchos estilos. Debajo del archivo de texto (si es que lo hay) 
+                aparecen los repositorios anclados por el usuario (máximo seis); 
+                si este no ha anclado ningún repositorio, aparecerán automáticamente sus 
+                repositorios públicos más populares.
+            </p>
+            <p>
+                En la última sección, debajo de los repositorios anclados o populares, 
+                aparece el gráfico que muestra los días en los que el usuario ha hecho 
+                como mínimo una contribución y la cantidad de estas. Adicionalmente, el 
+                usuario puede elegir si mostrar sus contribuciones a repositorios de 
+                organizaciones, si mostrar el gráfico que indica el porcentaje del 
+                tipo de contribuciones (revisiones de código, issues, pull requests y commits) 
+                o si incluir el número de contribuciones privadas. Del lado derecho hay 
+                una lista que enumera los años desde que el usuario se unió a GitHub 
+                hasta el presente año. Al hacer clic en uno de ellos, pueden verse las 
+                contribuciones hechas por el usuario en el año seleccionado.
+            </p>
+            <p>
+                Un usuario puede crear una organización, que no es más que una cuenta 
+                que representa a una empresa o equipo de trabajo. Se pueden crear 
+                repositorios dentro de una organización (los cuales pertenecen a ella) 
+                y determinar ajustes por defecto que serán seleccionados cuando se creen 
+                nuevos repositorios bajo el nombre de la organización, con el objetivo 
+                de mantener una uniformidad conforme a los deseos y necesidades de los 
+                miembros. Los usuarios que tienen el permiso de administrador 
+                pueden enviar solicitudes de unión a los usuarios que deseen, 
+                determinando cuáles permisos tendrán y con la capacidad de cambiarlos 
+                a su gusto en un futuro. Se lleva a cabo un proceso similar en el 
+                caso de que se quiera eliminar un miembro de la organización.
+            </p>
+            <p>
+                Con el objetivo de preservar la seguridad y el control de la organización, 
+                el dueño de una puede asignar distintos tipos de roles a los miembros que 
+                decida; estos roles difieren en los permisos que tienen, siendo algunos 
+                más restrictivos que otros. Existen cuatro tipos de roles: dueños, miembros, 
+                gestores de facturación y gestores de seguridad. Con relación a los 
+                roles existen los equipos: grupos en los que pueden ser organizados los 
+                miembros de una organización según la actividad que desempeñen. Esta 
+                función facilita el trabajo grupal y, sobre todo, el orden dentro de 
+                la organización. Cada equipo tiene su propia página de debates, 
+                pueden ser mencionados directamente, entre otras muchas funciones.
+            </p>
+            <p>
+                Al igual que los perfiles de usuarios, los perfiles de las organizaciones 
+                tienen pestañas en donde se muestran los repositorios que les pertenecen, 
+                las personas involucradas —y los equipos en los que son clasificadas—, 
+                la descripción, el enlace al sitio web oficial, etc. Funciones 
+                como el patrocinio pueden ser activadas igualmente en cuentas de organizaciones.
+            </p>
+            <h2 id="servicios">Servicios</h2>
+            <p>
+                GitHub ofrece un servicio con el que los usuarios pueden subir un sitio 
+                web directamente desde los servidores de GitHub, sin la necesidad de un 
+                almacenamiento externo en la nube. Estas páginas pueden ser creadas 
+                tanto para proyectos como para usuarios (a modo de portfolio), y el 
+                proceso es muy sencillo, pues basta con ir a la configuración del 
+                repositorio y a la sección de GitHub Pages. Es necesario que en el 
+                repositorio haya una estructura de archivos de sitios web que pueda ser 
+                leído por GitHub (como HTML); GitHub hará todo el trabajo automáticamente, 
+                pero el usuario puede cambiar la fuente de publicación si decide almacenar 
+                los archivos en un directorio diferente.
+            </p>
+            <p>
+                Además del uso básico de este servicio, es posible usar el generador de 
+                sitios web estáticos Jekyll, creado por Tom Preston-Werner, uno de 
+                los cofundadores de GitHub. El proceso de creación de un sitio web 
+                con Jekyll, aunque más complejo que el de la creación de un sitio simple, 
+                trae consigo varias ventajas. GitHub permite, asimismo, establecer 
+                nombres de dominio personalizados (que no tengan la terminación «github.io»), 
+                así como subdominios.
+            </p>
+            <p>
+                GitHub ofrece un servicio con el que los desarrolladores pueden ganar dinero 
+                por parte de usuarios y empresas que quieran patrocinarlos. Al patrocinar a 
+                un desarrollador, este recibe dinero a modo de agradecimiento por su trabajo 
+                o con la intención de recibir algún beneficio.
+            </p>
+            <p>
+                Los usuarios que han activado el patrocinio en su perfil pueden crear distintos 
+                niveles, que los interesados pueden luego seleccionar. Cada uno puede tener un 
+                precio diferente (tanto el monto recomendado como el monto mínimo) y distintos 
+                beneficios. Con el objetivo de mostrar al público hasta qué punto ha llegado 
+                el usuario, este puede establecer metas, las cuales son actualizadas automáticamente 
+                y reflejadas en su perfil. El 2 de febrero de 2022 se anunció, por medio del 
+                blog de GitHub, nuevas funciones para el patrocinio. Entre ellas se encuentran 
+                los repositorios que solo pueden ser vistos por patrocinadores, los montos 
+                mínimos personalizados, más información sobre los impuestos a pagar, un botón 
+                en los issues de los repositorios de un usuario, mensajes de bienvenida para 
+                nuevos patrocinadores y la posibilidad de incluir metadatos para ver de dónde 
+                vienen los nuevos patrocinadores.
+            </p>
+            <p>
+                No debe confundirse con el campo de información en los repositorios. Los 
+                desarrolladores pueden crear un archivo especial para mostrar un enlace a diferentes 
+                sitios de recaudación, todos ellos de terceros y sin relación con GitHub. GitHub Sponsors 
+                es la integración de este sistema en GitHub, permitiendo agregar funciones personalizadas 
+                para esta plataforma.
+            </p>
+            <p>
+                GitHub Education es un servicio que sirve para estudiantes, profesores y escuelas. 
+                Los estudiantes reciben GitHub Pro, un catálogo de cursos y herramientas para programar 
+                y un entrenamiento específico. Por otro lado, los profesores pueden crear una aula de 
+                clase, además de recibir GitHub Team de forma gratuita, herramientas para preparar a 
+                sus estudiantes y acceso a una comunidad para profesores. Las escuelas y universidades 
+                obtienen paquetes de herramientas y los beneficios que reciben los estudiantes y profesores 
+                individuales. Este proyecto de GitHub tiene como objetivo ayudar a los individuos y 
+                grupos a crear un ambiente de estudio sin carencias, teniendo a su disponibilidad 
+                diversas herramientas y soporte especializado.
+            </p>
+            <p>
+                Para animar a escuelas y estudiantes a desarrollarse en nuevas tecnologías, hay un 
+                apartado de eventos de GitHub Education, en donde se puede encontrar eventos tanto 
+                en persona como en línea en muchos países alrededor del mundo —y en varios idiomas—, 
+                cada uno de ellos diferentes en esencia, como conferencias para aprender un nuevo 
+                oficio o competiciones de código para poner a prueba a los desarrolladores.
+            </p>
+            <p>
+                Los repositorios sirven para almacenar, principalmente, archivos de texto. Sin embargo, 
+                GitHub ofrece un servicio llamado GitHub Gist, el cual permite crear un solo Gist donde 
+                guardar uno o más archivos de texto. El propósito de este servicio es simplificar la 
+                visualización de código por parte de personas que no saben cómo funciona un sistema 
+                de control de versiones, así como facilitar la copia y pega de trozos de código 
+                rápidamente por parte de los desarrolladores. El usuario que crea un Gist puede 
+                compartirlo fácilmente con un enlace, y en algunos sitios web es posible mostrar 
+                el Gist con solo incluir el enlace. Hay una sección de comentarios, y los usuarios 
+                registrados pueden votar positivamente si así lo desean. Técnicamente, un Gist 
+                es un repositorio que usa Git, pues puede ser bifurcado o clonado.
+            </p>
+            <p>
+                Un «Codespace» es un entorno de desarrollo integrado incluido en GitHub y disponible 
+                para ser usado en cualquier repositorio. Al igual que otros entornos, el entorno de 
+                GitHub le permite al desarrollador editar, depurar, ejecutar y realizar acciones del 
+                sistema de versiones directamente desde GitHub, sin la necesidad de clonar el 
+                repositorio en la computadora. Es posible personalizar los Codespaces al 
+                gusto: cambiar el tipo de máquina, agregar un contenedor de desarrollo, 
+                administrar los secretos cifrados, etc. Con relación a esto, GitHub ofrece 
+                una versión similar de forma gratuita (naturalmente con menos ventajas y posibilidades) 
+                que ayuda a los desarrolladores a interactuar con los repositorios que quieran sin la 
+                necesidad de abrir un editor de texto.
             </p>
         </main>
         <footer>
-            <a href="https://es.wikipedia.org/wiki/GitHub">
-                Wikipedia - GitHub
-            </a>
-            <a href="https://github.com/">
-                GitHub
-            </a>
+            <a href="tp1.html">Inicio</a>
+            <a href="tp3.html">Git</a>            
+            <a href="https://es.wikipedia.org/wiki/Git">Wikipedia - Git</a>
+            <a href="https://es.wikipedia.org/wiki/GitHub">Wikipedia - GitHub</a>
+            <a href="tp4.html">Linus Torvalds</a>
+            <a href="https://es.wikipedia.org/wiki/Linus_Torvalds">Wikipedia - Linus Torvalds</a>
+            <a href="https://github.com/">GitHub</a>
+            <a href="https://git-scm.com/">Git</a>
         </footer>
     </div>
 </body>
