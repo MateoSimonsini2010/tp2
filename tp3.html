@@ -6,7 +6,7 @@
 <body>
     <div class="contenedor-wiki">
         <header>
-            <h1>Git</h1>
+            <h1>SimonWiki</h1>
             <img
                 class="logo"
                 src="img\Captura_de_pantalla_2026-08-17_132006-removebg-preview.png"
@@ -14,94 +14,358 @@
         </header>
         <aside>
             <h2>Índice</h2>
-            <a href="tp1.html">Inicio</a>
-            <a href="tp2.html">GitHub</a>
-            <a href="tp3.html">Git</a>
-            <a href="tp4.html">Linus Torvalds</a>
+            <a href="#historia">Historia</a>
+            <a href="#caracteristicas">Caracteristicas</a>
+            <a href="#ordenes">Órdenes Básicas</a>
+            <a href="#flujo">Flujo de Trabajo</a>
+            <a href="#software">Software que los usa como base</a>
         </aside>
         <main>
             <h1>Git</h1>
             <p>
-                Git es un sistema de control de versiones distribuido
-                utilizado para gestionar cambios en código fuente y otros
-                archivos. Es especialmente popular entre desarrolladores
-                que trabajan de manera colaborativa en proyectos de software.
-                Su objetivo principal es ofrecer rapidez, seguridad e
-                integridad de los datos, además de facilitar el trabajo con
-                múltiples ramas y equipos distribuidos.
+                Git es un software de control de versiones diseñado por Linus Torvalds, 
+                pensando en la eficiencia, la confiabilidad y compatibilidad del mantenimiento 
+                de versiones de aplicaciones informáticas cuando estas tienen un gran número 
+                de archivos de código fuente. Su propósito es llevar registro de los cambios 
+                en archivos de computadora incluyendo coordinar el trabajo que varias personas 
+                realizan sobre archivos compartidos en un repositorio de código.
             </p>
             <p>
-                A diferencia de los sistemas tradicionales cliente-servidor,
-                Git permite que cada desarrollador tenga una copia completa
-                del repositorio y su historial en su computadora. Esto hace
-                posible trabajar incluso sin conexión a internet y luego
-                sincronizar los cambios con otros repositorios.
+                Al principio, Git se pensó como un motor de bajo nivel sobre el cual otros 
+                pudieran escribir la interfaz de usuario o front end como Cogito o StGIT. 
+                Sin embargo, Git se ha convertido desde entonces en un sistema de control 
+                de versiones con funcionalidad plena. Hay algunos proyectos de mucha 
+                relevancia que ya usan Git, en particular, el grupo de programación del 
+                núcleo Linux.
             </p>
             <p>
-                Gracias a su velocidad, flexibilidad y capacidad de
-                colaboración, Git se ha convertido en una herramienta
-                esencial en el desarrollo moderno de software y es utilizada
-                por la gran mayoría de los desarrolladores profesionales.
+                El mantenimiento del software Git está actualmente (2009) supervisado por 
+                Junio Hamano, quien recibe contribuciones al código de alrededor de 280 
+                programadores. En cuanto a derechos de autor Git es un software libre 
+                distribuible bajo los términos de la versión 2 de la Licencia Pública 
+                General de GNU.
             </p>
             <img
                 src="img/Git-logo.svg.webp"
                 alt="Logo de Git"
                 width="500">
-            <h2>Historia</h2>
+            <h2 id="historia">Historia</h2>
             <p>
-                Git fue creado en 2005 por Linus Torvalds para gestionar
-                el desarrollo del núcleo Linux, después de que la licencia
-                de la herramienta que utilizaban anteriormente dejara de
-                estar disponible. Fue diseñado para ser rápido, eficiente
-                y capaz de manejar proyectos grandes con miles de cambios
-                y colaboradores.
+                El desarrollo de Git fue iniciado por Linus Torvalds en abril de 2005 
+                después que la licencia gratuita de BitKeeper, el sistema propietario 
+                de control de versiones usado en el desarrollo del kernel de Linux desde 
+                2002, fue revocada para Linux. El titular del copyright de Bitkepper, 
+                Larry McVoy, afirmó que Andrew Tridgell había creado Source Puller 
+                utilizando ingeniería inversa a partir de los protocolos de BitKeeper.
+            </p>
+            <h2 id="caracteristicas">Características</h2>
+            <p>
+                El diseño de Git se basó en BitKeeper y en Monotone. Originalmente fue 
+                diseñado como un motor de sistema de control de versiones de bajo nivel 
+                sobre el cual otros podrían codificar interfaces frontales, tales como 
+                Cogito o StGIT. Desde ese entonces hasta ahora el núcleo del proyecto Git 
+                se ha vuelto un sistema de control de versiones completo, utilizable en 
+                forma directa.
             </p>
             <p>
-                Actualmente es el sistema de control de versiones más
-                utilizado en el desarrollo de software y es la base de
-                servicios como GitHub, GitLab y Bitbucket.
+                Linus Torvalds buscaba un sistema distribuido que pudiera usar en forma 
+                semejante a BitKeeper, pero ninguno de los sistemas bajo software libre 
+                disponibles cumplía con sus requerimientos, especialmente en cuanto a desempeño. 
+                El diseño de Git mantiene una enorme cantidad de código distribuida y 
+                gestionada por mucha gente, que incide en numerosos detalles de rendimiento, 
+                y de la necesidad de rapidez en una primera implementación.
             </p>
-            <h2>Características</h2>
             <p>
-                Entre sus principales características se encuentran:
+                Entre las características más relevantes se encuentran:
             </p>
             <ul>
                 <li>
-                    Creación y gestión de ramas para trabajar en distintas
-                    funciones al mismo tiempo.
+                    Fuerte apoyo al desarrollo no lineal, por ende rapidez en la gestión de 
+                    ramas y mezclado de diferentes versiones. Git incluye herramientas 
+                    específicas para navegar y visualizar un historial de desarrollo no 
+                    lineal. Una presunción fundamental en Git, es que un cambio será 
+                    fusionado mucho más frecuentemente de lo que se escribe originalmente, 
+                    conforme se pasa entre varios programadores que lo revisan.
                 </li>
                 <li>
-                    Fusión de cambios realizados por diferentes desarrolladores.
+                    Gestión distribuida. Al igual que Darcs, BitKeeper, Mercurial, SVK, Bazaar y 
+                    Monotone, Git le da a cada programador una copia local del historial del desarrollo 
+                    entero, y los cambios se propagan entre los repositorios locales. Los cambios se 
+                    importan como ramas adicionales y pueden ser fusionados en la misma manera que 
+                    se hace con la rama local.
                 </li>
                 <li>
-                    Historial completo de modificaciones y seguimiento
-                    de versiones.
+                    Los almacenes de información pueden publicarse por HTTP, FTP, rsync o 
+                    mediante un protocolo nativo, ya sea a través de una conexión TCP/IP simple 
+                    o a través de cifrado SSH. Git también puede emular servidores CVS, lo que habilita 
+                    el uso de clientes CVS preexistentes y módulos IDE para CVS preexistentes en el acceso 
+                    de repositorios Git.
                 </li>
                 <li>
-                    Trabajo distribuido con copias locales del proyecto.
+                    Los repositorios Subversion y svk se pueden usar directamente con git-svn.
                 </li>
                 <li>
-                    Verificación de integridad mediante funciones hash.
+                    Gestión eficiente de proyectos grandes, dada la rapidez de gestión de diferencias 
+                    entre archivos, entre otras mejoras de optimización de velocidad de ejecución.
                 </li>
                 <li>
-                    Soporte para múltiples protocolos y plataformas.
+                    Todas las versiones previas a un cambio determinado, implican la notificación 
+                    de un cambio posterior en cualquiera de ellas a ese cambio (denominado autenticación 
+                    criptográfica de historial). Esto existía en Monotone.
+                </li>
+                <li>
+                    Resulta algo más caro trabajar con ficheros concretos frente a proyectos, eso diferencia 
+                    el trabajo frente a CVS, que trabaja con base en cambios de fichero, pero mejora el trabajo 
+                    con afectaciones de código que concurren en operaciones similares en varios archivos.
+                </li>
+                <li>
+                    Los renombrados se trabajan basándose en similitudes entre ficheros, aparte de nombres de 
+                    ficheros, pero no se hacen marcas explícitas de cambios de nombre con base en supuestos nombres 
+                    únicos de nodos de sistema de ficheros, lo que evita posibles y desastrosas coincidencias de 
+                    ficheros diferentes en un único nombre.
+                </li>
+                <li>
+                    Realmacenamiento periódico en paquetes (ficheros). Esto es relativamente eficiente para 
+                    escritura de cambios y relativamente ineficiente para lectura si el reempaquetado (con base 
+                    en diferencias) no ocurre cada cierto tiempo.
+                </li>
+                <li>
+                    Compatibilidad con Github y Microsoft Visual Studio Code
+                </li>
+            </ul>
+            <h2 id="ordenes">Órdenes Básicas</h2>
+            <p>
+                Git incluye comandos básicos como:
+            </p>
+            <p>
+                git init: 
+                Esto crea un subdirectorio nuevo llamado .git, el cual contiene todos los archivos 
+                necesarios del repositorio, un esqueleto de un repositorio de Git. Todavía no hay 
+                nada en tu proyecto que esté bajo seguimiento.
+            </p>
+            <p>
+                git fetch: 
+                Descarga los cambios realizados en el repositorio remoto.
+            </p>
+            <p>
+                git merge: 
+                Impacta en la rama en la que te encuentras parado, los cambios realizados en la rama 
+                “nombre_rama”.
+            </p>
+            <p>
+                git pull: 
+                Unifica los comandos fetch y merge en un único comando.
+            </p>
+
+            <p>
+                git commit -m: 
+                Confirma los cambios realizados. El “mensaje” generalmente se usa para asociar al commit 
+                una breve descripción de los cambios realizados.
+            </p>
+            <p>
+                git push origin: 
+                Sube la rama “nombre_rama” al servidor remoto.
+            </p>
+            <p>
+                git status: 
+                Muestra el estado actual de la rama, como los cambios que hay sin 
+                commitear.
+            </p>
+            <p>
+                git add: 
+                Comienza a trackear el archivo “nombre_archivo”.
+            </p>
+            <p>
+                git checkout -b: 
+                Crea una rama a partir de la que te encuentres parado con el nombre “nombre_rama_nueva”, 
+                y luego salta sobre la rama nueva, por lo que quedas parado en esta última.
+            </p>
+            <p>
+                git checkout -t origin/: 
+                Si existe una rama remota de nombre “nombre_rama”, al ejecutar este comando se crea una 
+                rama local con el nombre “nombre_rama” para hacer un seguimiento de la rama remota con 
+                el mismo nombre.
+            </p>
+            <p>
+                git branch: 
+                Lista todas las ramas locales.
+            </p>
+            <p>
+                git branch -a: 
+                Lista todas las ramas locales y remotas.
+            </p>
+            <p>
+                git branch -d: 
+                Elimina la rama local con el nombre “nombre_rama”.
+            </p>
+            <p>
+                git push origin: 
+                Commitea los cambios desde el branch local origin al branch “nombre_rama”.
+            </p>
+            <p>
+                git remote prune origin:
+                Actualiza tu repositorio remoto en caso de que algún otro desarrollador 
+                haya eliminado alguna rama remota.
+            </p>
+            <p>
+                git reset --hard HEAD:
+                Elimina los cambios realizados que aún no se hayan hecho commit.                
+            </p>
+            <p>
+                git revert:
+                Revierte el commit realizado, identificado por el “hash_commit”.
+            </p>
+            <h2 id="flujo">Flujo de Trabajo</h2>
+            <p>
+                Git plantea una gran libertad en la forma de trabajar en torno a un proyecto. 
+                Sin embargo, para coordinar el trabajo de un grupo de personas en torno a un proyecto 
+                es necesario acordar como se va a trabajar con Git. A estos acuerdos se les llama 
+                flujo de trabajo. Un flujo de trabajo de Git es una fórmula o una recomendación 
+                acerca del uso de Git para realizar trabajo de forma uniforme y productiva. Los flujos 
+                de trabajo más populares son git-flow, GitHub-flow, GitLab Flow y One Flow.
+            </p>
+            <p>
+                Git-Flow: Creado en 2010 por Vincent Driessen. Es el flujo de trabajo más conocido. 
+                Está pensado para aquellos proyectos que tienen entregables y ciclos de desarrollo 
+                bien definidos. Está basado en dos grandes ramas con infinito tiempo de vida (ramas 
+                master y develop) y varias ramas de apoyo, unas orientadas al desarrollo de nuevas 
+                funcionalidades (ramas feature-*), otras al arreglo de errores (hotfix-*) y otras 
+                orientadas a la preparación de nuevas versiones de producción (ramas release-*). 
+                La herramienta gitflow  facilita la automatización de las tareas implicadas en este 
+                flujo de trabajo.
+            </p>
+            <ul>
+                <li>
+                    Master: Es la rama principal. Contiene el repositorio que se encuentra publicado 
+                    en producción, por lo que debe estar siempre estable.
+                </li>
+                <li>
+                    Development: Es una rama sacada de Master. Es la rama de integración, todas las 
+                    nuevas funcionalidades se deben integrar en esta rama. Luego que se realice la 
+                    integración y se corrijan los errores (en caso de haber alguno), es decir que la 
+                    rama se encuentre estable, se puede hacer un merge de development sobre la rama Master.
+                </li>
+                <li>
+                    Features: Cada nueva funcionalidad se debe realizar en una rama nueva, específica 
+                    para esa funcionalidad. Estas se deben sacar de Development. Una vez que la funcionalidad 
+                    esté desarrollada, se hace un merge de la rama sobre Development, donde se integrará 
+                    con las demás funcionalidades.
+                </li>
+                <li>
+                    Hotfix: Son errores de software que surgen en producción, por lo que se deben arreglar 
+                    y publicar de forma urgente. Es por ello, que son ramas sacadas de Master. Una vez 
+                    corregido el error, se debe hacer una unificación de la rama sobre Master. Al final, 
+                    para que no quede desactualizada, se debe realizar la unificación de Master sobre Development.
+                </li>
+                <li>
+                    Release: Las ramas de release apoyan la preparación de nuevas versiones de producción. 
+                    Para ellos se arreglan muchos errores menores y se preparan adecuadamente los metadatos. 
+                    Se suelen originar de la rama develop y deben fusionarse en las ramas master y develop.
                 </li>
             </ul>
             <p>
-                Git también incluye comandos básicos como
-                "git init" para crear un repositorio,
-                "git clone" para copiar uno existente,
-                "git add" para preparar archivos y
-                "git commit" para guardar cambios en el historial.
+                GitHub-Flow: Creado en 2011 por GitHub y es la forma de trabajo sugerida por las funcionalidades 
+                propias de GitHub. Está centrado en un modelo de desarrollo iterativo y de despliegue constante. 
+                Está basado en cinco principios:
+            </p> 
+            <ul>
+                <li>
+                    Todo lo que está en la rama master está listo para ser puesto en producción
+                </li>
+                <li>
+                    Para trabajar en algo nuevo, debes crear una nueva rama a partir de la rama 
+                    master con un nombre descriptivo. El trabajo se irá integrando sobre esa rama 
+                    en local y regularmente también a esa rama en el servidor
+                </li>
+                <li>
+                    Cuando se necesite ayuda o información o cuando creemos que la rama está lista 
+                    para integrarla en la rama master, se debe abrir una pull request (solicitud de 
+                    integración de cambios).
+                </li>
+                <li>
+                    Alguien debe revisar y visar los cambios para fusionarlos con la rama master
+                </li>
+                <li>
+                    Los cambios integrados se pueden poner en producción.
+                </li>
+            </ul>
+            <p>
+                GitHub intenta simplificar la gestión de ramas, trabajando directamente sobre la rama 
+                master y generando integrando las distintas features directamente a esta rama
             </p>
+            <p>
+                GitLab Flow: Creado en 2014 por Gitlab.[9] Es una especie de extensión de GitHub Flow 
+                acompañado de un conjunto de pautas y mejores prácticas que apuntan a estandarizar aún 
+                más el proceso. Al igual que GitHub Flow propone el uso de ramas de funcionalidad (feature) 
+                que se originan a partir de la rama master y que al finalizarse se mezclan con la rama master. 
+                Además introduce otros dos tipos de ramas:
+            </p>
+            <ul>
+                <li>
+                    Ramas de entorno. Por ejemplo pre-production production. Se crean a partir de la rama master 
+                    cuando estamos listos para implementar nuestra aplicación. Si hay un error crítico lo podemos 
+                    arreglar en un rama y luego mezclarla en la rama de entorno.
+                </li>
+                <li>
+                    Ramas de versión. Por ejemplo 1.5-stable 1.6-stable. El flujo puede incluir ramas de versión 
+                    en caso de que el software requiera lanzamientos frecuentes.
+                </li>
+            </ul>
+            <p>
+                One Flow: Creado en 2015 por Adam Ruka. En él cada nueva versión de producción está basada en 
+                la versión previa de producción. La mayor diferencia entre One Flow y Git Flow es que One Flow 
+                no tiene rama de desarrollo.
+            </p>
+            <h2 id="software">Software que los usa como base</h2>
+            <p>
+                Git se ha usado como software base sobre el que se han desarrollado otros proyectos
+            </p>
+            <ul>
+                <li>
+                    Gerrit. Aplicación web que permite la revisión de código en equipo para la aprobación o 
+                    rechazo de modificaciones. Consiste de un repositorio Git que actúa como intermediario 
+                    entre los gits de los desarrolladores y el repositorio Git que usa la integración continua. 
+                    Los desarrolladores en lugar de enviar el código al sistema de integración continua lo envían 
+                    al repositorio Gerrit donde se han establecido político.
+                </li>
+                <li>
+                    Las plataformas de forja son plataformas web que ofrecen servicios que permiten el desarrollo 
+                    colaborativo de software. Uno de los servicios básicos ofrecidos es poder crear repositorios de 
+                    software en un sistema de control de versiones concreto. El sistema de control de versiones más 
+                    utilizado es Git. Ejemplos de estos servicios son GitLab, Bitbucket, Azure Devops y GitHub. Se 
+                    han desarrollado varias soluciones que permiten crear automáticamente forjas software como por 
+                    ejemplo Gogs, Gitea, RhodeCode Community Edition o las versiones de plataformas ofrecidas por 
+                    GitHub (GitHub Enterprise), Gitlab (GitLab CE y GitLab EE) y Bitbucket.
+                </li>
+                <li>
+                    SparkleShare. Es un cliente de código abierto que permite usar repositorios Git como servicios 
+                    de alojamiento de archivos, permitiendo la sincronización de archivos y colaboración en la nube 
+                    de forma similar a Dropbox. Los repositorios Git pueden estar en una máquina Linux, generalmente 
+                    creados con la aplicación Dazzle  o en repositorios git alojados en la nube usando servicios como 
+                    GitLab, GitHub, Bitbucket, Azure Devops o NotABug.
+                </li>
+                <li>
+                    git-crypt. Herramienta de git que permite hacer cifrado de forma completamente transparente. 
+                    Cuando se hace un git push los ficheros marcados para cifrar se cifren automáticamenteno. 
+                    Análogamente se hará cuando se hace un git pull. De esta forma podemos tener un repositorio 
+                    que tenga parte de sus archivos cifrados y otra parte sin cifrar. El cifrado se puede realizar 
+                    con claves de cifrado simétrico (con GPG) o asimétrico.
+                </li>
+                <li>
+                    Herramientas, como gitflow , que facilitan la automatización de las tareas implicadas en cierto/s 
+                    flujo/s de trabajo.
+                </li>
+            </ul>
         </main>
         <footer>
-            <a href="https://es.wikipedia.org/wiki/Git">
-                Wikipedia - Git
-            </a>
-            <a href="https://git-scm.com/">
-                Git
-            </a>
+            <a href="tp1.html">Inicio</a>          
+            <a href="https://es.wikipedia.org/wiki/Git">Wikipedia - Git</a>
+            <a href="tp2.html">GitHub</a>
+            <a href="https://es.wikipedia.org/wiki/GitHub">Wikipedia - GitHub</a>
+            <a href="tp4.html">Linus Torvalds</a>
+            <a href="https://es.wikipedia.org/wiki/Linus_Torvalds">Wikipedia - Linus Torvalds</a>
+            <a href="https://github.com/">GitHub</a>
+            <a href="https://git-scm.com/">Git</a>
         </footer>
     </div>
 </body>
