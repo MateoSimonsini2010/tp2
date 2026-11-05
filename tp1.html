@@ -3,6 +3,7 @@
 <head>
     <title>INICIO</title>
     <link rel="stylesheet" href="tp.css">
+    <script src="tp.js" defer></script>
 </head>
 <body>
     <div class="contenedor-wiki">
@@ -15,9 +16,14 @@
         </header>
         <aside>
             <h2>Índice</h2>
-            <p>
-                No hay elementos en esta página.
-            </p>
+            <ul id="lista-indice"></ul>
+            <div class="panel-apariencia">
+                <h2>Apariencia</h2>
+                <button type="button" id="boton-modo">Modo oscuro</button>
+                <button type="button" class="boton-tamano" data-clase="texto-pequeno">Pequeño</button>
+                <button type="button" class="boton-tamano activo" data-clase="texto-estandar">Estándar</button>
+                <button type="button" class="boton-tamano" data-clase="texto-grande">Grande</button>
+            </div>
         </aside>
         <main>
             <h1>Mateo Simonsini</h1>
@@ -26,6 +32,19 @@
                 especialidad 4° Programación "A" y hoy te voy a mostrar
                 y explicar qué es Git, GitHub y quién es Linus Torvalds.
             </p>
+            <section>
+                <h2 id="discusion">Discusión</h2>
+                <form id="form-comentario" novalidate>
+                    <label for="campo-nombre">Nombre</label>
+                    <input type="text" id="campo-nombre" name="nombre">
+                    <label for="campo-comentario">Comentario</label>
+                    <textarea id="campo-comentario" name="comentario" rows="4"></textarea>
+                    <p id="contador">0 / 200</p>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="aviso-formulario"></p>
+                <ul id="lista-comentarios"></ul>
+            </section>
         </main>
         <footer>
             <a href="tp3.html">Git</a>            

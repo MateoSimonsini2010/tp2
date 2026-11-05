@@ -2,6 +2,7 @@
 <head>
     <title>Linus Torvalds</title>
     <link rel="stylesheet" href="tp.css">
+    <script src="tp.js" defer></script>
 </head>
 <body>
     <div class="contenedor-wiki">
@@ -14,11 +15,14 @@
         </header>
         <aside>
             <h2>Índice</h2>
-            <a href="#historia">Historia</a>
-            <a href="#linux">Creación de Linux</a>
-            <a href="#autoria">Autoría y Marca Registrada</a>
-            <a href="#vida">Vida Privada y Controversias</a>
-            <a href="#logros">Logros</a>
+            <ul id="lista-indice"></ul>
+            <div class="panel-apariencia">
+                <h2>Apariencia</h2>
+                <button type="button" id="boton-modo">Modo oscuro</button>
+                <button type="button" class="boton-tamano" data-clase="texto-pequeno">Pequeño</button>
+                <button type="button" class="boton-tamano activo" data-clase="texto-estandar">Estándar</button>
+                <button type="button" class="boton-tamano" data-clase="texto-grande">Grande</button>
+            </div>
         </aside>
         <main>
             <h1>Linus Torvalds</h1>
@@ -35,7 +39,8 @@
                 src="img/LinuxCon_Europe_Linus_Torvalds_03_(cropped).jpg"
                 alt="Linus Torvalds"
                 width="500">
-            <h2 id="historia">Historia</h2>
+            <section>
+                <h2 id="historia">Historia</h2>
             <p>
                 Linus nació en Helsinki, Finlandia, el 28 de diciembre de 1969. Sus padres son Anna 
                 y Nils Torvalds, ambos periodistas. Es nieto del estadístico Leo Törnqvist y 
@@ -100,7 +105,9 @@
                 y la confiabilidad del mantenimiento de versiones de aplicaciones cuando estas 
                 tienen un gran número de archivos de código fuente.
             </p>
-            <h2 id="linux">Creación de Linux</h2>
+            </section>
+            <section>
+                <h2 id="linux">Creación de Linux</h2>
             <p>
                 En Finlandia, Linus Torvalds, por entonces estudiante de Ciencias de la Computación 
                 de la Universidad de Helsinki, decidió realizar la entonces cuantiosa inversión de 
@@ -143,7 +150,9 @@
                 de FTP proporcionado por su universidad la versión 0.01 de Linux con 10 000 líneas 
                 de código. A partir de ese momento Linux empezó a evolucionar rápidamente.
             </p>
-            <h2 id="autoria">Autoría y Marca Registrada</h2>
+            </section>
+            <section>
+                <h2 id="autoria">Autoría y Marca Registrada</h2>
             <p>
                 A medida que la popularidad de Linux se extendía, Microsoft lo calificó como un 
                 cáncer describiendo al software de código abierto como una afrenta al capitalismo. 
@@ -175,7 +184,9 @@
                 src="img/Linus_Torvalds.jpeg"
                 alt="Linus Torvalds"
                 width="500">
-            <h2 id="vida">Vida Privada y Controversias</h2>
+            </section>
+            <section>
+                <h2 id="vida">Vida Privada y Controversias</h2>
             <p>
                 Linus Torvalds está casado con Tove Torvalds (karateka finlandesa). Se conocieron 
                 en 1993. Años después se casaron y tuvieron tres hijas, dos de las cuales 
@@ -207,7 +218,9 @@
                 y abogar por la intimidación personal y la violencia, a través de un comunicado anunció que 
                 se tomaría un descanso de sus actividades para aprender a controlar sus emociones.
             </p>
-            <h2 id="logros">Logros</h2>
+            </section>
+            <section>
+                <h2 id="logros">Logros</h2>
             <ul>
                 <li>
                     En 1996, un asteroide recibió el nombre de (9793) Torvalds en su honor.
@@ -283,6 +296,20 @@
                     Masaru Ibuka Consumer Electronics Award.
                 </li>
             </ul>
+            </section>
+            <section>
+                <h2 id="discusion">Discusión</h2>
+                <form id="form-comentario" novalidate>
+                    <label for="campo-nombre">Nombre</label>
+                    <input type="text" id="campo-nombre" name="nombre">
+                    <label for="campo-comentario">Comentario</label>
+                    <textarea id="campo-comentario" name="comentario" rows="4"></textarea>
+                    <p id="contador">0 / 200</p>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="aviso-formulario"></p>
+                <ul id="lista-comentarios"></ul>
+            </section>
         </main>
         <footer>
             <a href="tp1.html">Inicio</a>

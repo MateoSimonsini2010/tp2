@@ -2,6 +2,7 @@
 <head>
     <title>Git</title>
     <link rel="stylesheet" href="tp.css">
+    <script src="tp.js" defer></script>
 </head>
 <body>
     <div class="contenedor-wiki">
@@ -14,11 +15,14 @@
         </header>
         <aside>
             <h2>Índice</h2>
-            <a href="#historia">Historia</a>
-            <a href="#caracteristicas">Caracteristicas</a>
-            <a href="#ordenes">Órdenes Básicas</a>
-            <a href="#flujo">Flujo de Trabajo</a>
-            <a href="#software">Software que los usa como base</a>
+            <ul id="lista-indice"></ul>
+            <div class="panel-apariencia">
+                <h2>Apariencia</h2>
+                <button type="button" id="boton-modo">Modo oscuro</button>
+                <button type="button" class="boton-tamano" data-clase="texto-pequeno">Pequeño</button>
+                <button type="button" class="boton-tamano activo" data-clase="texto-estandar">Estándar</button>
+                <button type="button" class="boton-tamano" data-clase="texto-grande">Grande</button>
+            </div>
         </aside>
         <main>
             <h1>Git</h1>
@@ -49,7 +53,8 @@
                 src="img/Git-logo.svg.webp"
                 alt="Logo de Git"
                 width="500">
-            <h2 id="historia">Historia</h2>
+            <section>
+                <h2 id="historia">Historia</h2>
             <p>
                 El desarrollo de Git fue iniciado por Linus Torvalds en abril de 2005 
                 después que la licencia gratuita de BitKeeper, el sistema propietario 
@@ -58,7 +63,9 @@
                 Larry McVoy, afirmó que Andrew Tridgell había creado Source Puller 
                 utilizando ingeniería inversa a partir de los protocolos de BitKeeper.
             </p>
-            <h2 id="caracteristicas">Características</h2>
+            </section>
+            <section>
+                <h2 id="caracteristicas">Características</h2>
             <p>
                 El diseño de Git se basó en BitKeeper y en Monotone. Originalmente fue 
                 diseñado como un motor de sistema de control de versiones de bajo nivel 
@@ -133,7 +140,9 @@
                     Compatibilidad con Github y Microsoft Visual Studio Code
                 </li>
             </ul>
-            <h2 id="ordenes">Órdenes Básicas</h2>
+            </section>
+            <section>
+                <h2 id="ordenes">Órdenes Básicas</h2>
             <p>
                 Git incluye comandos básicos como:
             </p>
@@ -215,7 +224,9 @@
                 git revert:
                 Revierte el commit realizado, identificado por el “hash_commit”.
             </p>
-            <h2 id="flujo">Flujo de Trabajo</h2>
+            </section>
+            <section>
+                <h2 id="flujo">Flujo de Trabajo</h2>
             <p>
                 Git plantea una gran libertad en la forma de trabajar en torno a un proyecto. 
                 Sin embargo, para coordinar el trabajo de un grupo de personas en torno a un proyecto 
@@ -316,7 +327,9 @@
                 la versión previa de producción. La mayor diferencia entre One Flow y Git Flow es que One Flow 
                 no tiene rama de desarrollo.
             </p>
-            <h2 id="software">Software que los usa como base</h2>
+            </section>
+            <section>
+                <h2 id="software">Software que los usa como base</h2>
             <p>
                 Git se ha usado como software base sobre el que se han desarrollado otros proyectos
             </p>
@@ -356,6 +369,20 @@
                     flujo/s de trabajo.
                 </li>
             </ul>
+            </section>
+            <section>
+                <h2 id="discusion">Discusión</h2>
+                <form id="form-comentario" novalidate>
+                    <label for="campo-nombre">Nombre</label>
+                    <input type="text" id="campo-nombre" name="nombre">
+                    <label for="campo-comentario">Comentario</label>
+                    <textarea id="campo-comentario" name="comentario" rows="4"></textarea>
+                    <p id="contador">0 / 200</p>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="aviso-formulario"></p>
+                <ul id="lista-comentarios"></ul>
+            </section>
         </main>
         <footer>
             <a href="tp1.html">Inicio</a>          
