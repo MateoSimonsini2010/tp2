@@ -2,6 +2,7 @@
 <head>
     <title>GitHub</title>
     <link rel="stylesheet" href="tp.css">
+    <script src="tp.js" defer></script>
 </head>
 <body>
     <div class="contenedor-wiki">
@@ -14,9 +15,14 @@
         </header>
         <aside>
             <h2>Índice</h2>
-            <a href="#historia">Historia</a>
-            <a href="#caracteristicas">Caracteristicas</a>            
-            <a href="#servicios">Servicios</a>
+            <ul id="lista-indice"></ul>
+            <div class="panel-apariencia">
+                <h2>Apariencia</h2>
+                <button type="button" id="boton-modo">Modo oscuro</button>
+                <button type="button" class="boton-tamano" data-clase="texto-pequeno">Pequeño</button>
+                <button type="button" class="boton-tamano activo" data-clase="texto-estandar">Estándar</button>
+                <button type="button" class="boton-tamano" data-clase="texto-grande">Grande</button>
+            </div>
         </aside>
         <main>
             <h1>GitHub</h1>
@@ -51,7 +57,8 @@
                 src="img/GitHub_Invertocat_Logo.svg.webp"
                 alt="Logo de GitHub"
                 width="500">
-            <h2 id="historia">Historia</h2>
+            <section>
+                <h2 id="historia">Historia</h2>
             <p>
                 La plataforma comenzó a desarrollarse en 2007 y fue lanzada
                 en 2008 por Tom Preston-Werner, Chris Wanstrath, P. J. Hyett
@@ -70,7 +77,9 @@
                 src="img/Number_of_open_source_contributors_by_company.png"
                 alt="Gráfico sobre contribuyentes de código abierto"
                 width="500">
-            <h2 id="caracteristicas">Caracteristicas</h2>
+            </section>
+            <section>
+                <h2 id="caracteristicas">Caracteristicas</h2>
             <p>
                 Los repositorios son, como su propio nombre indica, lugares 
                 virtuales alojados en la nube en donde los usuarios pueden 
@@ -231,7 +240,9 @@
                 la descripción, el enlace al sitio web oficial, etc. Funciones 
                 como el patrocinio pueden ser activadas igualmente en cuentas de organizaciones.
             </p>
-            <h2 id="servicios">Servicios</h2>
+            </section>
+            <section>
+                <h2 id="servicios">Servicios</h2>
             <p>
                 GitHub ofrece un servicio con el que los usuarios pueden subir un sitio 
                 web directamente desde los servidores de GitHub, sin la necesidad de un 
@@ -322,6 +333,20 @@
                 que ayuda a los desarrolladores a interactuar con los repositorios que quieran sin la 
                 necesidad de abrir un editor de texto.
             </p>
+            </section>
+            <section>
+                <h2 id="discusion">Discusión</h2>
+                <form id="form-comentario" novalidate>
+                    <label for="campo-nombre">Nombre</label>
+                    <input type="text" id="campo-nombre" name="nombre">
+                    <label for="campo-comentario">Comentario</label>
+                    <textarea id="campo-comentario" name="comentario" rows="4"></textarea>
+                    <p id="contador">0 / 200</p>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="aviso-formulario"></p>
+                <ul id="lista-comentarios"></ul>
+            </section>
         </main>
         <footer>
             <a href="tp1.html">Inicio</a>
